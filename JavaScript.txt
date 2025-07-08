@@ -1,0 +1,34 @@
+**** JavaScript ****
+
+1. How to accept user input?
+--> Its has two way,
+    1. By using windows prompt 
+	--> eg. let username = window.prompt("Enter your username");
+	
+	2. By using html textbox
+	--> let username;
+        document.getElementById("mybutton").onclick = function(){
+          username = document.getElementById("mytext").value;
+          document.getElementById("myH").textContent = `welcome, ${username}`;
+        }
+	
+2. Data type conversion
+--> Integer <--> String <--> Boolen
+    eg. let x = "ABC";
+	    x = Number(x);  --> Console.log(x , typeOf x)  --> NaN number   --- (NaN i.e Not a Number)
+		x = String(x);  --> Console.log(x , typeOf x)  --> ABC String
+		x = Boolen(x);  --> Console.log(x , typeOf x)  --> true boolen  
+		
+	--> We can convert any datatype to boolen, then its give true.
+	--> If we convert empty string to boolen then its give false.
+	--> If we doesn`t assign value to the variable and we want to convert into the boolen then its give false.
+	
+3. let & const variable 
+--> let x = 1234;   --> we can futher change the valude of x in the program 
+    const PI = 3.14159;  --> we can not change the value of PI one we declear and assign value. 
+							 Generally  const variable we can declear in uppercase.
+	
+		
+		
+		
+		
