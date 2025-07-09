@@ -1,7 +1,9 @@
 body{
    font-family: verdana;
 }
-#myLable{
+
+/* for Inc and desc task */
+/* #myLable{
     display: block;
     font-size: 8em;
     text-align: center;
@@ -22,4 +24,19 @@ body{
 }
 .button:hover{
     background-color:  rgb(4, 150, 150);
+} */
+
+/* Random number generator */
+
+/* .main{
+    display: block;
+    text-align: center;
+}
+#myBTN{
+    font-size: 2em;
+} */
+
+/* for checked properties */
+#myCh{
+    margin-bottom: 4px;
 }
