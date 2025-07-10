@@ -28,7 +28,43 @@
     const PI = 3.14159;  --> we can not change the value of PI one we declear and assign value. 
 							 Generally  const variable we can declear in uppercase.
 	
+4. Math. fucnctions
+--> it is use for doing the math operation, like max(), min(), random(), floor(), etc.
+
+5. Generate the random number.
+--> By using Math.random() function we can genarate random number.
+    eg. let random = Math.floor(Math.random() * 6) + 1
+		--> here Math.random() function gives output of random number in floting points and grater then and equal to 0 and less then one.
+		--> so here Math.floor function is converting the floting point number to Integer.
+		--> here (.... * 6 ) means I want random number in between 0 to 6, But equal to 0 
+		--> and (....) + 1 means I want 0 to 6 i.e. 0 also and 6 also for that I need to add +1.
 		
+6. .checked properties
+--> it is use to checkes wether the any checkedboc or any button like radio button is checked or not.
+
+7. ternary operator
+--> Its just like a if..else statement.
+    --> syntax --  condition ? true : false
+	--> eg. age >= 18 ? "Your age is 18+" : "Your are still 18-";
+	
+8. String Methods
+--> There are some pre define methods for string manupilation like length, toUppercas(), indexOf(), lastIndexof(), etc
+--> Some Methods --
+    --> length --> gives the length of string
+	--> indexOf("A") --> give the index of A 
+	--> firstIndexOf("A") --> gives the first apperance of A
+	--> lastIndesOf("A")  --> give last apperanceof A
+	--> padStart(15 , "0") --> its make string length of 15, and if its not 15 then add 0 at start position to make length 15.
+	--> padLast(15 , "0")  --> its make string length of 15, and if its not 15 then add 0 at last position to make length 15.
+	--> slice(start , end) --> its give sub string according to the index
+	
+9. I have a string of full name, so i want to seprate both first and last name
+--> eg. let fullName = "Ritesh Sherekar"
+        I want --> firstName = Ritesh , lastName = Sherekar
 		
-		
-		
+	--> let firstName = fullName.slice(0 , fullName.indexOf(" ")); -- Ritesh --  // Its give char from 0 index to index of space 
+	--> let lastName = fullName.slice(fullName.indexOf(" ") + 1); -- Sherekar -- // Its give char from index of index of space to length of fullName
+	
+10. Method Chaining 
+--> Its is use to write a string methods in one line
+    eg. let username = fullName.trim().charAt(0).toUpperCase() + fullName.trim().slice(1).toLowerCase();
