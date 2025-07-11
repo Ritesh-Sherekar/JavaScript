@@ -79,7 +79,7 @@
 
 // for method chaining
 
-let username = window.prompt("Enter your username ");
+//let username = window.prompt("Enter your username ");
 
 // without method chainning
 // username = username.trim();
@@ -95,5 +95,13 @@ let username = window.prompt("Enter your username ");
 
 // with method chainning
 
-username = username.trim().charAt(0).toUpperCase() + username.trim().slice(1).toLowerCase();
-console.log(username);
+// username = username.trim().charAt(0).toUpperCase() + username.trim().slice(1).toLowerCase();
+// console.log(username);
+
+// Number gussing game
+
+let minValue = 1;
+let maxValue = 100;
+let answer = Math.floor(Math.random() * (maxValue - minValue + 1)) + minValue;
+
+let guess;

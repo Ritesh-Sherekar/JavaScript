@@ -68,3 +68,30 @@
 10. Method Chaining 
 --> Its is use to write a string methods in one line
     eg. let username = fullName.trim().charAt(0).toUpperCase() + fullName.trim().slice(1).toLowerCase();
+	
+11. Diffrence between =, ==, ===, !=, !===
+--> = :- its is assignment operator, 
+    == :- it is comparition operator, use to cheaked only values not the datatype.
+	=== :- it is strick comparition operator, use to checked value as well as datatype of that value.
+	!= :- it is inequality operator, it`s give true if two valuses are diffrent.
+	!== :- it is strick inequality operator, it`s give true if two valuses and it`s datatype is diffrent.
+	
+12. continue and break ststement 
+--> continue :- it is use to skip the current itteration.
+    eg. for(let i=1; i<=10; i++){
+	       if(i == 8){
+		     continue;   // here when i=8 then its skip the 8 and print 9 , 10
+		   }else{
+		     console.log(i); // Output :- 1,2,3,4,5,6,7,9,10
+		   }
+	    } 
+		
+	break :- it is use to terminate the loop.
+	 eg. for(let i=1; i<=10; i++){
+	       if(i == 4){
+		     break;   // here when i=4 then its terminate the loop.
+		   }else{
+		     console.log(i); // Output :- 1,2,3
+		   }
+	    } 
+		
