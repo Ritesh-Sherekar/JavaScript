@@ -14,7 +14,6 @@
 //     document.getElementById("myH").textContent = `welcome, ${username}`;
 // }
 
-
 // for inc and desc task
 
 // const desc = document.getElementById("dec");
@@ -36,7 +35,6 @@
 //     count = 0;
 //     webCount.textContent = count;
 // }
-
 
 // Random number generator
 
@@ -64,8 +62,8 @@
 //         forS.textContent = "You are Scbscribe";
 //     }else{
 //          forS.textContent = "You are not Scbscribe";
-//     } 
-    
+//     }
+
 //     if(visa.checked){
 //         forP.textContent = "Pay using visa";
 //     }else if(master.checked){
@@ -100,8 +98,60 @@
 
 // Number gussing game
 
-let minValue = 1;
-let maxValue = 100;
-let answer = Math.floor(Math.random() * (maxValue - minValue + 1)) + minValue;
+// let minValue = 1;
+// let maxValue = 100;
+// let answer = Math.floor(Math.random() * (maxValue - minValue + 1)) + minValue;
 
-let guess;
+// let guess;
+// let attempt = 0;
+// let running = true;
+
+// while (running) {
+//   guess = window.prompt(`Guess the correct number Between ${minValue} and ${maxValue}`);
+//   guess = Number(guess);
+
+//   if (isNaN(guess)) {
+//     window.alert("Enter the valid number!!!!");
+//   }
+//   else if (guess < minValue || guess > maxValue) {
+//     window.alert("Enter the between the range!!!!");
+//   }
+//   else {
+//     attempt++;
+//     if (guess < answer) {
+//       window.alert("It`s too low !!!!");
+//     }
+//     else if (guess > answer) {
+//       window.alert("It`s too High !!!!");
+//     }
+//     else {
+//       window.alert(
+//         `You guess correct number and you take ${attempt} attempt to Guess!!!` );
+//          running = false;
+//     }
+//   }
+// }
+
+// Tempreture Convertion Program
+
+const textvalue = document.getElementById("textBox");
+const Celsius = document.getElementById("toCelsius");
+const Fahrenheit = document.getElementById("toFahrenheit");
+const mySubmit = document.getElementById("submit");
+const mytext = document.getElementById("myID");
+
+let temp;
+
+function myFunction() {
+  if (Celsius.checked) {
+    temp = Number(textvalue.value());
+    temp = temp * 9 / 5 + 32;
+    mytext.textContent = temp + "F";
+  } else if (Fahrenheit.checked) {
+   temp = Number(textvalue.value());
+    temp = (temp - 32) * (5/9);
+    mytext.textContent = temp + "C";
+  } else {
+    mytext.textContent = "Select the checked box";
+  }
+}
