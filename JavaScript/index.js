@@ -134,24 +134,38 @@
 
 // Tempreture Convertion Program
 
-const textvalue = document.getElementById("textBox");
-const Celsius = document.getElementById("toCelsius");
-const Fahrenheit = document.getElementById("toFahrenheit");
-const mySubmit = document.getElementById("submit");
-const mytext = document.getElementById("myID");
+// const textvalue = document.getElementById("textBox");
+// const Celsius = document.getElementById("toCelsius");
+// const Fahrenheit = document.getElementById("toFahrenheit");
+// const mySubmit = document.getElementById("submit");
+// const mytext = document.getElementById("myID");
 
-let temp;
+// let temp;
 
-function myFunction() {
-  if (Celsius.checked) {
-    temp = Number(textvalue.value());
-    temp = temp * 9 / 5 + 32;
-    mytext.textContent = temp + "F";
-  } else if (Fahrenheit.checked) {
-   temp = Number(textvalue.value());
-    temp = (temp - 32) * (5/9);
-    mytext.textContent = temp + "C";
-  } else {
-    mytext.textContent = "Select the checked box";
+// function myFunction() {
+//   if (Celsius.checked) {
+//     temp = Number(textvalue.value());
+//     temp = temp * 9 / 5 + 32;
+//     mytext.textContent = temp + "F";
+//   } else if (Fahrenheit.checked) {
+//    temp = Number(textvalue.value());
+//     temp = (temp - 32) * (5/9);
+//     mytext.textContent = temp + "C";
+//   } else {
+//     mytext.textContent = "Select the checked box";
+//   }
+// }
+
+
+
+// Spread Operator
+
+function sum(...num){
+  let result = 0 ;
+  for(let nums of num){
+    result += nums;
   }
+  return result;
 }
+let ans = sum(1, 2, 3, 4);
+console.log(ans);
