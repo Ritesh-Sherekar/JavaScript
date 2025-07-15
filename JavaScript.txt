@@ -95,3 +95,63 @@
 		   }
 	    } 
 		
+13. Array and Spread Operator(...)
+---> Array :- Array is the collection of the elements of  same datatype.
+     e.g let age = [24, 25, 60, 45];
+	 age.push(70); // it will add the element at end of the array
+	 age.pop();  // it will remove the elelmets from last of the array
+	 age.unshift(30);  // it will add the element in serting of the array
+	 age.shift();  // it will remove the element from the sarting of the array.
+	 
+--> How can we itterating the array 	
+    1. By using any loop i.e. for() loop , while() loop , do-while() loop
+    2. Enhance for loop 
+    --> e.g let ages = [24, 25, 60, 45];
+	        for(let age of ages){
+			  Console.log(age);
+			}
+	 
+--> Spread Operator :- it is ude to itterating the array or string as each element are expanded as a seperate element.
+    e.g let age = [24, 25, 60, 45];
+	    Here i want to find maximum number from Array
+		--> let maxNumber = Math.max(age);   // its give NaN because Math.max() function should not itterate each element.
+		    So, here we need to use Spread Operator to itterate each element.
+			--> let maxNumber = Math.max(...age); // Now its give maximum number from the array i.e. 60
+			
+	--> We can add two array using Spread operator
+	    --> let A = [1, 2, 3, 4, 5];
+		    let B = [6, 7, 8, 9, 10];
+			
+			let C = [...A , ...B];
+			Console.log(C);  // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+			
+			let C = [...A , ...B , 11, 12, 13];  // we can also add the elements
+		    Console.log(C);  // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+
+	--> we can we Spread operator for String also.
+	    --> let str = "Ritesh";
+		    Console.log(...str);  // Output will be :- {'R', 'i', 't', 'e', 's', 'h'}
+			
+14. Rest Parameter (...rest)
+--> It is just opposite to the Spread Operator, Spread Operator is ude to seperate the elelmetsfrom array.
+    And Rest Parameter is use to collect the elements and make a Array.
+	
+	e.g Create a function which return the sum of number
+	function sum(...num){
+	   let result = 0;
+	   for(let nu of num){
+	      result += result;
+	   }
+	  return result; 
+	}
+	let mySum = sum(1, 2, 3, 4);
+	Console.log(mySum);   // output will be :- 10
+	
+--> It is also work with the string.
+    e.g I want fullName from the number of parameter
+	function fullName(...values){
+	  return values.join("-");
+	}
+	
+	let Answer = fullName("Ritesh", "Pradip", "Sherekar");
+	Console.log(Answer);   // Output will be :- (Ritesh-Pradip-Sherekar)
