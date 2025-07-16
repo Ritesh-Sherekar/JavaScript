@@ -156,16 +156,77 @@
 //   }
 // }
 
-
-
 // Spread Operator
 
-function sum(...num){
-  let result = 0 ;
-  for(let nums of num){
-    result += nums;
+// function sum(...num){
+//   let result = 0 ;
+//   for(let nums of num){
+//     result += nums;
+//   }
+//   return result;
+// }
+// let ans = sum(1, 2, 3, 4);
+// console.log(ans);
+
+// For Dice Game
+
+// function myFunction() {
+//   const myInput = document.getElementById("myIn").value;
+//   const myBtn = document.getElementById("myBT");
+//   const myVal = document.getElementById("myValue");
+//   const myIMG = document.getElementById("myImg");
+//   const values = [];
+//   const img = [];
+
+//   for(let i =0; i< myInput; i++){
+//     let randVal = Math.floor(Math.random() * 6) + 1;
+//     values.push(randVal);
+//     img.push(`<img src="images/${randVal}.png" alt="Dice: ${randVal}">`);
+  
+//   }
+//   myVal.textContent = `Dice :- ${values.join(", ")}`;
+//   myIMG.innerHTML = img.join('');
+// }
+
+
+
+// Random Password Generator
+
+function generatePassword(NoDigit, isLowerCase, isUpperCase, isDigit, isSymbol){
+
+  let lowerCase = "abcdefghigklmnopqrstuvwxyz";
+  let upperCase = "ABCDEFGHIJKLNMOPQRSTUVWXYZ";
+  let digit = "0123456789";
+  let symbol = "!@#$%^&*()_+~;./,<>?:";
+
+  let allowed = "";
+  let password = "";
+
+  allowed += isLowerCase ? lowerCase : "";
+  allowed += isUpperCase ? upperCase : "";
+  allowed += isDigit ? digit : "";
+  allowed += isSymbol ? symbol : "";
+
+  if(NoDigit <= 0){
+    console.log("Password length sould be greater then 0")
   }
-  return result;
+  if(allowed.length <=0){
+    console.log("You must be select one set of rule");
+  }
+
+  for(let i=0; i<NoDigit; i++){
+    let randNum = Math.floor(Math.random() * allowed.length);
+    password += allowed[randNum];
+  }
+
+  return password;
 }
-let ans = sum(1, 2, 3, 4);
-console.log(ans);
+
+const noOfDigit = 12;
+const includeLowerCase = true;
+const includeUpperCase = true;
+const includeDigit = true;
+const includeSymbol = true;
+
+let password = generatePassword(noOfDigit, includeLowerCase, includeUpperCase, includeDigit, includeSymbol);
+console.log("Your generated password should be :- " + password);
